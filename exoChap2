@@ -1,0 +1,11 @@
+Exo1:
+Écrire un programme pour calculer la facture d'électricité  selon les critères suivants :
+
+moins de 100 unités                                               gratuit
+plus de  100 et moins de 200 unités                   5 € par unité
+Plus de  200 unités                                             10 € par unité
+
+Exo2:
+Écrire un programme pour calculer la somme de tous les nombres de 1 à un n, n étant  une variable définit au prealable ( on peut supposer la valeur de n a 20 )
+Écrire un programme pour a calculer la factoriel d’un nombre  n étant  une variable définit au prealable ( on peut supposer la valeur de n a 5 )
+factoriel de 5 = 5*4*3*2*1
