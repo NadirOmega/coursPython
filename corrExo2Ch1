@@ -1,0 +1,12 @@
+degree=30
+print("C vers F")
+result = (9 * degree) / 5 + 32
+result2 = int(round((9 * degree) / 5 + 32))
+print(result)
+print(result2)
+degree=300
+print("F vers C")
+result = (degree - 32) * 5 / 9
+result2 = int(round((degree - 32) * 5 / 9))
+print(result)
+print(result2)
