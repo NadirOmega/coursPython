@@ -1,0 +1,15 @@
+
+Exo 1 : 
+Programme Python pour convertir les températures vers et depuis Celsius et Fahrenheit.
+Dans un script Python, declarer les variables suivantes :
+- nom de type String avec comme valeur votre nom
+- age de type int avec comme valeur votre age
+- age2 de type int avec comme valeur la variable age -10
+- age3 de type String avec comme valeur votre age
+Comparer et afficher  les valeurs des comparaisons suivantes :
+- age et age2 avec les operateurs : < ,>
+- age et age3 avec l’operateur ==  , a votre avis pourquoi on a ce résultat comment remedier a cela ?
+
+
+Exo 2 : 
+Programme Python pour convertir les températures vers et depuis Celsius et Fahrenheit.
