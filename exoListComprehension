@@ -18,3 +18,12 @@ Exo7:
 Créez un dictionnaire contenant les notes des étudiants d'une classe. Les clés du dictionnaire doivent être les noms des étudiants, et les valeurs doivent être leurs notes respectives. Utilisez une compréhension de liste pour créer le dictionnaire à partir d'une liste de noms d'étudiants et une liste de notes.
 noms = ["Toto", "Tata", "Charlie", "David", "Eva"]
 notes = [15, 18, 12, 16, 14]
+
+exo8 : 
+Créez un dictionnaire contenant les informations sur des étudiants. Chaque clé du dictionnaire doit être le nom d'un étudiant, et chaque valeur doit être un dictionnaire contenant les clés "matières" et "notes". Les matières doivent être une liste de matières suivies par l'étudiant, et les notes doivent être une liste de notes correspondantes. Utilisez une compréhension de liste pour créer le dictionnaire à partir de deux listes: une liste de noms d'étudiants et une liste de tuples contenant les matières et les notes.
+ex :  
+noms = ["Toto", "Tata", "Toootoooo", "Dodo", "Dada"]
+matieres_notes = [
+    (["Mathématiques", "Physique", "Chimie"], [15, 18, 12]),
+    (["Informatique", "Anglais"], [14, 16])
+]
