@@ -1,3 +1,6 @@
 Exercice 1: Écrivez une compréhension de liste qui génère une liste contenant les carrés des entiers de 1 à 20
 Exercice 2: Écrivez une compréhension de liste qui génère une liste contenant les nombres pairs de 1 à 20.
 Exercice 3: Écrivez une compréhension de liste qui génère une liste contenant les mots d'une phrase dont la longueur est supérieure à 5 caractères.
+exemple : 
+phrase = "Le python est un langage très facile "
+utiliser la fonction len(mot) pour avoir la taille d'un mot 
