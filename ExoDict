@@ -1,0 +1,31 @@
+Exo 1 :
+Tester la fonction str.splt() ex: 
+ligne="Hello World"
+ligne.split()
+, cette fonction est utile pour la suite de l'exercice
+Écrivez un programme Python pour compter les occurrences de chaque mot dans une phrase donnée. 
+
+Hello Word, Hello Python
+Hello =2,Word = 1, Python=1
+
+Exo2:
+: Écrivez une fonction qui prend en entrée une liste de dictionnaires, où chaque dictionnaire représente un produit avec ses attributs (nom, prix, quantité, etc.), et renvoie le nom du produit ayant le prix maximal. 
+Liste des produits
+produits = [
+    {'nom': 'Ordinateur', 'prix': 1500},
+    {'nom': 'Télévision', 'prix': 1200},
+    {'nom': 'Smartphone', 'prix': 900},
+    {'nom': 'Tablette', 'prix': 800}
+]
+
+# => Ordinateur
+
+Exo3:
+Écrivez une fonction qui prend en entrée deux dictionnaires avec des clés communes et renvoie un dictionnaire avec les mêmes clés, mais les valeurs sont la somme des valeurs correspondantes des deux dictionnaires. 
+dictionnaire1 = {'a': 1, 'b': 2, 'c': 3}
+dictionnaire2 = {'b': 4, 'c': 5, 'd': 6}
+resultat = somme_dict(dictionnaire1, dictionnaire2)
+print(resultat)  
+# => Résultat attendu: {'b': 6, 'c': 8}
+
+Exo4:
