@@ -4,3 +4,8 @@ Exercice 3: Écrivez une compréhension de liste qui génère une liste contenan
 exemple : 
 phrase = "Le python est un langage très facile "
 utiliser la fonction len(mot) pour avoir la taille d'un mot 
+Exercice 4:
+Écrivez une compréhension de liste qui génère une liste contenant les tuples de tous les nombres pairs et impairs de 1 à 10.
+=> output [(1, 2), (3, 4), (5, 6), (7, 8), (9, 10)].
+
+Exercice 5 : 
