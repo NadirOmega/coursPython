@@ -1,0 +1,38 @@
+Corr exo2:
+
+def produit_prix_maximal(liste_produits):
+    produit_max = None
+    prix_max = float('-inf')
+    for produit in liste_produits:
+        if produit['prix'] > prix_max:
+            produit_max = produit['nom']
+            prix_max = produit['prix']
+    return produit_max
+
+# Exemple d'utilisation
+produits = [
+    {'nom': 'Ordinateur', 'prix': 1500},
+    {'nom': 'Télévision', 'prix': 1200},
+    {'nom': 'Smartphone', 'prix': 900},
+    {'nom': 'Tablette', 'prix': 800}
+]
+resultat = produit_prix_maximal(produits)
+print(resultat)  
+
+
+Corr exo3:
+ef somme_dictionnaires(dictionnaire1, dictionnaire2):
+    def somme_valeurs(valeur1, valeur2):
+        return valeur1 + valeur2
+
+    dictionnaire = {}
+    for cle in dictionnaire1.keys() & dictionnaire2.keys():
+        valeur1 = dictionnaire1[cle]
+        valeur2 = dictionnaire2[cle]
+        somme = somme_valeurs(valeur1, valeur2)
+        dictionnaire[cle] = somme
+    return dictionnaire
+dictionnaire1 = {'a': 1, 'b': 2, 'c': 3}
+dictionnaire2 = {'b': 4, 'c': 5, 'd': 6}
+resultat = somme_dict(dictionnaire1, dictionnaire2)
+print(resultat)  # Résultat attendu: {'b': 6, 'c': 8}
