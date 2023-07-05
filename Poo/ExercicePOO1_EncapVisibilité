@@ -13,3 +13,10 @@ Ajoutez une méthode "modifier_informations_protégé" pour afficher les informa
 Ajoutez une méthode "modifier_informations_privé" pour modifier les informations privé du véhicule.
 
 
+class Vehicule:
+    def __init__(self, couleur,marque, modele, annee):
+        self.couleur = couleur
+        self._marque = marque
+        self._modele = modele
+        self.__annee = annee
+
