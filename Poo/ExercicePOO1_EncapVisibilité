@@ -20,3 +20,8 @@ class Vehicule:
         self._modele = modele
         self.__annee = annee
 
+Énoncé: Créez les classes suivantes pour modéliser un système de gestion des véhicules dans une entreprise de location :
+    • Classe Vehicule : représente un véhicule( class de base ) avec les attributs marque, modèle et année.
+    • Classe Voiture : hérite de la classe Vehicule et ajoute les attributs spécifiques nombre_portes et carburant.
+    • Classe Moto : hérite de la classe Vehicule et ajoute l'attribut spécifique cylindrée.
+    • Classe Location : représente une location de véhicule avec les attributs vehicule (un objet de type Vehicule) et jours (nombre de jours de location).
