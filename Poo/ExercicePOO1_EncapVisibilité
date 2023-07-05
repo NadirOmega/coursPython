@@ -1,0 +1,15 @@
+Exo : 
+Créez une classe ( avec constructeur __init__ )  appelée "Vehicule" avec les attributs public:
+couleur
+attributs protégés (accessibles uniquement aux classes dérivées) suivants: 
+marque et année. 
+attributs privée 
+Num_chassis 
+Ajoutez une méthode "afficher_informations_public" pour afficher les informations public du véhicule.
+Ajoutez une méthode "afficher_informations_protégé" pour afficher les informations protégées du véhicule.
+Ajoutez une méthode "afficher_informations_privé" pour afficher les informations privé du véhicule.
+
+Ajoutez une méthode "modifier_informations_protégé" pour afficher les informations protégé du véhicule.
+Ajoutez une méthode "modifier_informations_privé" pour modifier les informations privé du véhicule.
+
+
