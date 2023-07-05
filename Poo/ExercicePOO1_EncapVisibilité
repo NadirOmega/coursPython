@@ -25,3 +25,6 @@ class Vehicule:
     • Classe Voiture : hérite de la classe Vehicule et ajoute les attributs spécifiques nombre_portes et carburant.
     • Classe Moto : hérite de la classe Vehicule et ajoute l'attribut spécifique cylindrée.
     • Classe Location : représente une location de véhicule avec les attributs vehicule (un objet de type Vehicule) et jours (nombre de jours de location).
+
+Utilisez les classes Voiture, Moto et Location pour créer des instances de véhicules (3 motos  est 2 voitures à stocker dans un tableau )
+et de locations, et affichez leurs informations.( penser polymorphisme)
