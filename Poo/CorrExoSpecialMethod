@@ -16,9 +16,9 @@ class Book:
             return self.price < other.price
         return NotImplemented
 
-book1 = Book("Python Crash Course", 29.99)
-book2 = Book("Learn Python the Hard Way", 19.99)
-book3 = Book("Python for Data Analysis", 49.99)
+book1 = Book("Python avec Jean-Marc", 29.99)
+book2 = Book("Cloud avec Francoise ", 19.99)
+book3 = Book("Java avec Rodolophe", 49.99)
 
 book_list = [book1, book2, book3]
 book_list.sort()
