@@ -1,0 +1,9 @@
+Créez une classe appelée Book avec les attributs title (str) et price (float).
+    1. Implémentez les méthodes magiques __str__, __eq__ et __lt__ pour la classe Book.
+        ◦ __str__ doit retourner une représentation sous forme de chaîne de caractères de l'objet Book.
+        ◦ __eq__ doit comparer l'égalité entre deux objets Book en fonction de leur titre et de leur prix.
+        ◦ __lt__ doit comparer l'ordre entre deux objets Book en fonction de leur prix.
+    2. Instanciez plusieurs objets Book avec des titres et des prix différents.
+    3. Créez une liste contenant ces objets Book.
+    4. Triez la liste en utilisant la fonction sort().
+    5. Parcourez la liste triée et affichez chaque objet en utilisant la fonction print.
