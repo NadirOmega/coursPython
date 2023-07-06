@@ -13,7 +13,9 @@ supprimer_auteur()
 modifier_livre()
 modifier_auteur()
 
-recuperer_livres_auteur()
+recuperer_livres_auteur() : recuperer les livres a partir d'un auteur
+recuperer_auteur_livre(): recuperer un auteur a partir d'un livre
+
 
 
 Modifier la Classe Librairie en ajoutant/modifiant les methodes ( pour permettre une interraction avec la base de données ) :
