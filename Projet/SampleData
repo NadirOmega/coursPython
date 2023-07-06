@@ -1,0 +1,64 @@
+
+auteurs = [
+    Auteur("J.K. Rowling", "Royaume-Uni"),
+    Auteur("Stephen King", "États-Unis"),
+    Auteur("Agatha Christie", "Royaume-Uni"),
+    Auteur("George R.R. Martin", "États-Unis"),
+    Auteur("Haruki Murakami", "Japon"),
+    Auteur("Gabriel García Márquez", "Colombie"),
+    Auteur("Jane Austen", "Royaume-Uni"),
+    Auteur("Victor Hugo", "France"),
+    Auteur("Leo Tolstoy", "Russie"),
+    Auteur("Ernest Hemingway", "États-Unis"),
+    Auteur("Albert Camus", "France"),
+    Auteur("Virginia Woolf", "Royaume-Uni"),
+    Auteur("J.R.R. Tolkien", "Royaume-Uni"),
+    Auteur("Fyodor Dostoevsky", "Russie"),
+    Auteur("Margaret Atwood", "Canada"),
+    Auteur("Franz Kafka", "République tchèque"),
+    Auteur("Italo Calvino", "Italie"),
+    Auteur("Maya Angelou", "États-Unis"),
+    Auteur("Octavia Butler", "États-Unis"),
+    Auteur("Yukio Mishima", "Japon")
+]
+
+livres = [
+    Livre("Harry Potter à l'école des sorciers", auteurs[0], 29.90),
+    Livre("Harry Potter et la Chambre des secrets", auteurs[0], 24.50),
+    Livre("Shining", auteurs[1], 24.50),
+    Livre("Le Crime de l'Orient-Express", auteurs[2], 19.99),
+    Livre("Le Trône de fer", auteurs[3], 39.90),
+    Livre("1Q84", auteurs[4], 28.50),
+    Livre("1Q84 - Livre 2", auteurs[4], 26.50),
+    Livre("Cent ans de solitude", auteurs[5], 22.95),
+    Livre("Cent ans de solitude - Édition spéciale", auteurs[5], 28.50),
+    Livre("Orgueil et Préjugés", auteurs[6], 17.99),
+    Livre("Les Misérables", auteurs[7], 31.75),
+    Livre("Guerre et Paix", auteurs[8], 36.50),
+    Livre("Guerre et Paix - Tome 2", auteurs[8], 21.50),
+    Livre("Le Vieil Homme et la Mer", auteurs[9], 15.80),
+    Livre("L'Étranger", auteurs[10], 16.99),
+    Livre("L'Étranger - Édition spéciale", auteurs[10], 19.99),
+    Livre("Mrs Dalloway", auteurs[11], 20.50),
+    Livre("Le Seigneur des Anneaux", auteurs[12], 42.00),
+    Livre("Le Seigneur des Anneaux - Tome 1", auteurs[12], 24.99),
+    Livre("Le Seigneur des Anneaux - Tome 2", auteurs[12], 26.99),
+    Livre("Crime and Punishment", auteurs[13], 25.99),
+    Livre("The Handmaid's Tale", auteurs[14], 23.95),
+    Livre("The Handmaid's Tale - Édition spéciale", auteurs[14], 26.99),
+    Livre("Metamorphosis", auteurs[15], 18.50),
+    Livre("Invisible Cities", auteurs[16], 21.50),
+    Livre("I Know Why the Caged Bird Sings", auteurs[17], 16.99),
+    Livre("Kindred", auteurs[18], 19.75),
+    Livre("The Temple of the Golden Pavilion", auteurs[19], 27.50)
+]
+
+
+librairie = Librairie("Ma Librairie")
+
+
+for auteur in auteurs:
+    librairie.ajouter_auteur(auteur)
+
+for livre in livres:
+    librairie.ajouter_livre(livre)
