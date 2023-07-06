@@ -1,0 +1,29 @@
+class Auteur:
+    def __init__(self, nom, nationalite):
+        self.nom = nom
+        self.nationalite = nationalite
+
+class Livre:
+    def __init__(self, titre, auteur, prix):
+        self.titre = titre
+        self.auteur = auteur
+        self.prix = prix
+
+class Librairie:
+    def __init__(self, nom, adresse):
+        self.nom = nom
+        self.adresse = adresse
+        self.auteurs = []
+        self.livres = []
+
+    def ajouter_auteur(self, auteur):
+        self.auteurs.append(auteur)
+
+    def ajouter_livre(self, livre):
+        self.livres.append(livre)
+
+    def recuperer_auteur_par_livre(self, titre_livre):
+        for livre in self.livres:
+            if livre.titre == titre_livre:
+                return livre.auteur
+        return None
