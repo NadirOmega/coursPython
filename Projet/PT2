@@ -1,0 +1,27 @@
+Créer la Class GestionnaireBaseDonnees :
+
+Attributs :
+connexion (objet sqlite3.Connection) : l'objet de connexion à la base de données.
+curseur (objet sqlite3.Cursor) : l'objet curseur pour exécuter les requêtes SQL.
+Méthodes :
+__init__(self, nom_fichier): initialise un objet GestionnaireBaseDonnees avec le nom du fichier de base de données spécifié.
+creer_tables(self): crée les tables "auteurs" et "livres" dans la base
+ajouter_livre()
+ajouter_auteur()
+supprimer_livre()
+supprimer_auteur()
+modifier_livre()
+modifier_auteur()
+
+recuperer_livres_auteur()
+
+
+Modifier la Classe Librairie en ajoutant/modifiant les methodes ( pour permettre une interraction avec la base de données ) :
+
+
+Méthodes :
+modifier la methode = __init__(self, nom): pour initialisé la base de données .
+
+
+sauvegarder_livres(): sauvegarde les livres de la librairie dans la base de données.
+charger_livres(): charge les livres depuis la base de données dans la librairie.
