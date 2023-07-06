@@ -1,0 +1,4 @@
+rajouter une class StatistiquesLivres qui utilise la classe GestionnaireBaseDonnees et implemente les methodes :
+- recuperer_auteurs_plus_ouvrages
+- classement_livres_chers_par_auteur
+- statistiques_auteur_livre: moyenne des prix et le nombre de livre par auteurs
