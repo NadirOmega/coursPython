@@ -1,0 +1,36 @@
+Vous êtes chargé de développer une application de gestion d'une bibliothèque. Vous devez créer des classes pour représenter une bibliothèque, un livre et un auteur. La bibliothèque doit être capable d'ajouter des livres, de supprimer des livres, d'afficher la liste des livres et de calculer le prix moyen des livres.
+
+Voici les spécifications des classes à implémenter :
+
+Classe Auteur :
+
+Attributs :
+nom (string) : le nom de l'auteur.
+nationalite (string) : la nationalité de l'auteur.
+Méthodes :
+__init__(self, nom, nationalite): initialise un objet Auteur avec les attributs spécifiés.
+Classe Livre :
+
+Attributs :
+titre (string) : le titre du livre.
+auteur (objet Auteur) : l'auteur du livre.
+prix (float) : le prix du livre.
+Méthodes :
+__init__(self, titre, auteur, prix): initialise un objet Livre avec les attributs spécifiés.
+Classe Bibliotheque :
+
+Attributs :
+nom (string) : le nom de la bibliothèque.
+livres (liste) : une liste des livres présents dans la bibliothèque.
+Méthodes :
+__init__(self, nom): initialise un objet Bibliotheque avec le nom spécifié.
+ajouter_livre(self, livre): ajoute un livre à la bibliothèque.
+supprimer_livre(self, titre): supprime un livre de la bibliothèque en utilisant le titre comme critère de recherche.
+afficher_livres(self): affiche la liste des livres présents dans la bibliothèque.
+calculer_prix_moyen(self): calcule et retourne le prix moyen des livres présents dans la bibliothèque.
+
+Votre tâche consiste à implémenter les classes Auteur, Livre et Bibliotheque selon les spécifications données.
+Ensuite, vous devez créer une instance de la classe Bibliotheque, ajouter quelques livres à la bibliothèque, 
+afficher la liste des livres et calculer le prix moyen des livres.
+
+
