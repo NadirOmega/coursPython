@@ -84,3 +84,20 @@ id, titre, auteur_id, prix = resultat
             livre = Livre(titre, auteur, prix)
             livres.append(livre)
         return livres
+
+
+
+    def grouper_livres_par_nationalite(self):
+        self.curseur.execute('''SELECT auteurs.nationalite, livres.* FROM livres
+                                JOIN auteurs ON auteurs.id = livres.auteur_id
+                                ORDER BY auteurs.nationalite''')
+        resultats = self.curseur.fetchall()
+        livres_par_nationalite = {}
+        for resultat in resultats:
+            nationalite, id, titre, auteur_id, prix = resultat
+            auteur = self.recuperer_auteur(auteur_id)
+            livre = Livre(titre, auteur, prix)
+            if nationalite not in livres_par_nationalite:
+                livres_par_nationalite[nationalite] = []
+            livres_par_nationalite[nationalite].append(livre)
+        return livres_par_nationalite
