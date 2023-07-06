@@ -1,0 +1,86 @@
+import sqlite3
+
+class GestionnaireBaseDonnees:
+    def __init__(self, nom_fichier):
+        self.connexion = sqlite3.connect(nom_fichier)
+        self.curseur = self.connexion.cursor()
+
+    def creer_tables(self):
+        # Table Auteur
+        self.curseur.execute('''CREATE TABLE IF NOT EXISTS auteurs
+                                (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                 nom TEXT,
+                                 nationalite TEXT)''')
+
+        # Table Livre
+        self.curseur.execute('''CREATE TABLE IF NOT EXISTS livres
+                                (id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                 titre TEXT,
+                                 auteur_id INTEGER,
+                                 prix REAL,
+                                 FOREIGN KEY (auteur_id) REFERENCES auteurs (id))''')
+
+        self.connexion.commit()
+
+    def ajouter_auteur(self, auteur):
+        self.curseur.execute('''INSERT INTO auteurs (nom, nationalite)
+                                VALUES (?, ?)''', (auteur.nom, auteur.nationalite))
+        self.connexion.commit()
+        return self.curseur.lastrowid
+
+    def ajouter_livre(self, livre):
+        self.curseur.execute('''INSERT INTO livres (titre, auteur_id, prix)
+                                VALUES (?, ?, ?)''', (livre.titre, livre.auteur_id, livre.prix))
+        self.connexion.commit()
+        return self.curseur.lastrowid
+
+    def recuperer_auteur(self, auteur_id):
+        self.curseur.execute("SELECT * FROM auteurs WHERE id=?", (auteur_id,))
+        resultat = self.curseur.fetchone()
+        if resultat:
+            id, nom, nationalite = resultat
+            return Auteur(nom, nationalite)
+        return None
+
+    def recuperer_livre(self, livre_id):
+        self.curseur.execute("SELECT * FROM livres WHERE id=?", (livre_id,))
+        resultat = self.curseur.fetchone()
+        if resultat:
+            id, titre, auteur_id, prix = resultat
+            auteur = self.recuperer_auteur(auteur_id)
+            return Livre(titre, auteur, prix)
+        return None
+
+    def recuperer_livres_par_auteur(self, auteur_id):
+        self.curseur.execute("SELECT * FROM livres WHERE auteur_id=?", (auteur_id,))
+        resultats = self.curseur.fetchall()
+        livres = []
+        for resultat in resultats:
+            id, titre, auteur_id, prix = resultat
+            auteur = self.recuperer_auteur(auteur_id)
+            livre = Livre(titre, auteur, prix)
+            livres.append(livre)
+        return livres
+
+    def recuperer_auteur_par_livre(self, livre_id):
+        self.curseur.execute('''SELECT auteurs.* FROM auteurs
+                                JOIN livres ON auteurs.id = livres.auteur_id
+                                WHERE livres.id = ?''', (livre_id,))
+        resultat = self.curseur.fetchone()
+        if resultat:
+            id, nom, nationalite = resultat
+            return Auteur(nom, nationalite)
+        return None
+
+    def recuperer_livres_par_nationalite(self, nationalite):
+        self.curseur.execute('''SELECT livres.* FROM livres
+                                JOIN auteurs ON auteurs.id = livres.auteur_id
+                                WHERE auteurs.nationalite = ?''', (nationalite,))
+        resultats = self.curseur.fetchall()
+        livres = []
+        for resultat in resultats:
+id, titre, auteur_id, prix = resultat
+            auteur = self.recuperer_auteur(auteur_id)
+            livre = Livre(titre, auteur, prix)
+            livres.append(livre)
+        return livres
