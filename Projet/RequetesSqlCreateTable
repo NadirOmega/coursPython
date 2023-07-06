@@ -1,0 +1,16 @@
+requete_auteurs = """
+        CREATE TABLE IF NOT EXISTS auteurs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nom TEXT NOT NULL,
+            nationalite TEXT NOT NULL
+        )
+        """
+requete_livres = """
+        CREATE TABLE IF NOT EXISTS livres (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            titre TEXT NOT NULL,
+            auteur_id INTEGER NOT NULL,
+            prix REAL NOT NULL,
+            FOREIGN KEY (auteur_id) REFERENCES auteurs (id)
+        )
+        """
