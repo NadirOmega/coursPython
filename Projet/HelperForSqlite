@@ -1,0 +1,85 @@
+import sqlite3
+
+# Connexion à une base de données SQLite
+conn = sqlite3.connect("ma_base_de_donnees.db")
+
+
+cursor = conn.cursor()
+
+# Exécution d'une requête SELECT
+cursor.execute("SELECT * FROM ma_table")
+
+# Exécution d'une requête INSERT
+cursor.execute("INSERT INTO ma_table (colonne1, colonne2) VALUES (?, ?)", (valeur1, valeur2))
+
+# Exécution d'une requête UPDATE
+cursor.execute("UPDATE ma_table SET colonne = ? WHERE condition", (nouvelle_valeur,))
+
+# Exécution d'une requête DELETE
+cursor.execute("DELETE FROM ma_table WHERE condition")
+
+# Commit des modifications
+conn.commit()
+
+
+
+
+
+
+cursor.execute("SELECT * FROM ma_table")
+
+# Récupération d'une seule ligne
+row = cursor.fetchone()
+
+# Récupération de plusieurs lignes
+rows = cursor.fetchmany(5)
+
+# Récupération de toutes les lignes
+rows = cursor.fetchall()
+
+
+cursor.execute("SELECT * FROM ma_table")
+
+# Récupération de toutes les lignes
+rows = cursor.fetchall()
+
+# Affichage des résultats ligne par ligne
+for row in rows:
+    print(row)
+
+
+
+cursor.execute("SELECT nom, age FROM ma_table")
+
+rows = cursor.fetchall()
+
+# Affichage des colonnes spécifiques
+for row in rows:
+    nom = row[0]
+    age = row[1]
+    print("Nom :", nom, " Age :", age)
+
+
+# Exemple de requête SELECT avec un paramètre sécurisé
+id = 1
+cursor.execute("SELECT * FROM ma_table WHERE id=?", (id,))
+rows = cursor.fetchall()
+
+
+# Exemple d'insertion de données
+cursor.execute("INSERT INTO ma_table (colonne1, colonne2) VALUES (?, ?)", (valeur1, valeur2))
+conn.commit()
+
+
+try:
+    # Exécution d'une requête
+    cursor.execute("INSERT INTO ma_table (colonne1) VALUES (?)", (valeur,))
+    conn.commit()
+except Exception as e:
+    # Gestion des erreurs
+    print("Erreur :", e)
+    conn.rollback()
+
+
+
+conn.close()
